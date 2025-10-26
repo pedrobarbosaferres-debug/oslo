@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Nevasca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="logo">Oslo,Noruega</h1>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#about">Objetivo</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contact">Contato</a>
+      <a href=""></a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Olá, Seja bem vindo ao <span>Nosso Trabalho</span></h2>
+      <p>Aqui vamos mostrar um pouco sobre oslo</p>
+      <a href="#projects" class="btn">Ver Projetos</a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="Objetivo" class="Objetivo">
+    <h2>Objetivo</h2>
+    <p>nossa equipe fez um trabalho falando e mostrando um pouco sobre Oslo, e utilizando as medidas de tendência central</p>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projects" class="projects">
+    <h2>Um pouco sobre oslo</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>localização</h3>
+        <p>Oslo fica na Noruega, sendo a capital e a maior cidade do país. Localiza-se no extremo norte do continente europeu, na parte norte-ocidental da península escandinava. </p>
+      </div>
+      <div class="card">
+        <h3>Curiosidade</h3>
+        <p>Segundo antigas lendas nórdicas, o frio intenso vinha de Niflheim, o “reino do gelo e da neblina”, de onde os ventos gelados sopravam para o mundo dos homens, trazendo o inverno.</p>
+      </div>
+      <div class="card">
+        <h3>Um pouco sobre a Jessica na Noruega</h3><br>
+        <p>A Jéssica é brasileira, natural de São Vicente, litoral de São Paulo.</p>
+        <p>Casou-se com um norueguês, tem filha, e se mudou para a Noruega em meados de 2018 — enfrentou friozão, mudança de vida, tudo mesmo.</p>
+        <p>No canal “Vida na Noruega”, ela mostra o cotidiano dela morando na Noruega como imigrante, as diferenças culturais, a rotina em cidades como Ålesund etc</p>
+      </div>
+    </div>
+  </section>
+
+<section>
+
+   <h2 align="center">Desafio </h2>
+   <h3 align="center">Nivel 1</h3><br>
+
+  <form id="quizForm" align="center">
+    <p>1. na medidas de tendência central, qual é a mediana</p>
+    <input type="radio" name="q1" value="mediana"> o centro de todos<br><br>
+    <input type="radio" name="q1" value="meida">A soma de todos depois dividir pela quantidade de numeros <br><br>
+    <input type="radio" name="q1" value="Moda"> O numero que mais se repete<br><br><br>
+
+    <h3>Nivel 2</h3><br>
+    <p>2. Um grupo de 10 amigos anotou quantas horas estudaram para a prova de matemática nesta semana: <br>
+    Horas estudadas: 2, 3, 5, 4, 3, 6, 5, 4, 3, 2</p><br>
+    <input type="radio" name="q2" value="errado">3,5 <br><br>
+    <input type="radio" name="q2" value="errado"> 3,9<br><br>
+    <input type="radio" name="q2" value="certo"> 3,7<br><br>
+    <input type="radio" name="q2" value="certo"> 4,2<br><br>
+
+    <h3>Nivel 3</h3><br>
+    <p>3. O gráfico apresenta o comportamento de emprego formal surgido, segundo o CAGED, no período de janeiro de 2010 a outubro de 2010. <br>
+
+    Quais valores são, respectivamente, a moda, média e mediana dos números da lista a seguir? <br><br>
+
+    Lista de dados: <br><br>
+
+    133, 425, 244, 385, 236, 236, 328, 1000, 299, 325</p><br>
+    <input type="radio" name="q3" value="errado">236; 360 e 312<br><br>
+    <input type="radio" name="q3" value="certo1"> 236; 361,1 e 312<br><br>
+    <input type="radio" name="q3" value="errado"> 244; 361 e 312<br><br>
+    <input type="radio" name="q3" value="errado"> 236; 361,1 e 299<br><br>
+
+    <button type="button" onclick="verificar()">Ver Resultado</button>
+    </form></section>
+
+    <p id="resultado"></p>
+
+    <script>
+    function verificar() {
+      let score = 0;
+
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      const q3 = document.querySelector('input[name="q3"]:checked');
+
+      if(q1 && q1.value === "mediana") score++;
+      if(q2 && q2.value === "certo") score++;
+      if(q3 && q3.value === "certo1") score++;
+
+      document.getElementById("resultado").textContent = `Você acertou ${score} de 3 perguntas!`;
+    }
+  </script>
+
+  <footer>
+    <p>© Sesi.</p>
+  </footer>
+
+</body>
+</html>
